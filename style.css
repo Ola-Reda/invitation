@@ -356,7 +356,7 @@ font-size:1.6rem;
   margin-bottom:8px;
   color: #f4ead9;
   font-weight: 800;
-  letter-spacing: 0px !important;
+  letter-spacing: -2px !important;
 }
 .invite-names .amp2{
   display:block;
