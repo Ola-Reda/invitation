@@ -14,10 +14,8 @@
 }
 
 @font-face {
-    font-family: "Diwani Letter";
+    font-family: "Diwani";
     src: url("https://res.cloudinary.com/dyyxhm3uc/raw/upload/v1785192000/ArbFONTS-Diwani_Letter_faknbt.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
     font-display: swap;
 }
 
@@ -336,7 +334,7 @@ font-size:1.6rem;
   margin-bottom:26px;
 }
 .invite-names{
-  font-family: "Diwani Letter", serif;
+  font-family: "Diwani";
   font-size:2.5rem;
   line-height:1.7;
   margin-bottom:8px;
