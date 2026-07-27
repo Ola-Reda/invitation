@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @font-face {
     font-family: "Tajawal";
     src: url("https://res.cloudinary.com/dyyxhm3uc/raw/upload/v1785191377/ArbFONTS-Tajawal-Regular_k6tblf.ttf") format("truetype");
@@ -197,6 +198,17 @@ visibility:visible;
   color: #e9dcc0;
   font-size: 20px;
   top: -40px;
+  opacity: 0;
+    /* transform: translateY(40px); */
+}
+#screen-names.show .date{
+    animation: riseHeart 2s ease-out 1.3s forwards;
+}
+
+#screen-names.show .date {
+    animation:
+        riseHeart 7s ease-out 1.3s forwards,
+        heartbeat 7s ease-in-out 3.2s infinite;
 }
 .names-inner{
 position:relative;
@@ -207,6 +219,7 @@ display: flex;
     align-items: center;
     width: 80%;
     flex-direction: row-reverse;
+    gap: 10px;
 }
 .names-photo-bg{
 position:absolute;
@@ -216,14 +229,18 @@ object-fit:cover;
 z-index:0;
 }
 .names-big{
-font-family:'Aref Ruqaa', serif;
+font-family: "Great Vibes", cursive;
 font-size:1.5rem;
 line-height:1.25;
 position:relative;
 z-index:2;
 opacity:0;
 transform:translateY(50px) scale(0.85);
-animation:riseFromEnvelope 1.3s cubic-bezier(.2,.8,.3,1) .7s forwards;
+/* animation:riseFromEnvelope 1.3s cubic-bezier(.2,.8,.3,1) .7s forwards; */
+}
+
+#screen-names.show .names-big{
+    animation: riseFromEnvelope 7s cubic-bezier(.2,.8,.3,1) .7s forwards;
 }
 .amp{
 display:block;
@@ -246,6 +263,36 @@ font-size:1.6rem;
   filter:blur(0px);
 }
 }
+
+@keyframes riseHeart{
+    0%{
+        opacity:0;
+        filter:blur(3px);
+    }
+    70%{
+        opacity:1;
+        filter:blur(0);
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+
+@keyframes heartbeat{
+    0%,100%{
+        transform:scale(1);
+    }
+    20%{
+        transform:scale(1.15);
+    }
+    40%{
+        transform:scale(.95);
+    }
+    60%{
+        transform:scale(1.12);
+    }
+}
 /*screen 2*/
 /*screen 3*/
 #screen-invite{
@@ -256,7 +303,7 @@ font-size:1.6rem;
   visibility:hidden;
   transition:opacity 2s ease;
   background-image: url(images/red-flower.jpg);
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -294,7 +341,7 @@ font-size:1.6rem;
   line-height:1.7;
   margin-bottom:8px;
   color: #f4ead9;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0px;
 }
 .invite-names .amp2{
@@ -309,5 +356,32 @@ font-size:1.6rem;
   line-height:2;
   color:#c9bbbc;
   margin-block:12px;
+}
+
+.invite-eyebrow,
+.invite-names,
+.invite-body{
+    opacity: 0;
+}
+
+#screen-invite.show .invite-eyebrow{
+    animation: fadeOnly 3s ease forwards;
+}
+
+#screen-invite.show .invite-names{
+    animation: fadeOnly 4s ease .6s forwards;
+}
+
+#screen-invite.show .invite-body{
+    animation: fadeOnly 5s ease 1.2s forwards;
+}
+
+@keyframes fadeOnly{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 /*screen 3*/
