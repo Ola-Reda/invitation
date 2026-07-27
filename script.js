@@ -6,7 +6,7 @@ const envWrap = document.getElementById('envelopeWrap');
   envWrap.addEventListener('click', () => {
   envWrap.classList.add('open');
   const promptText = document.querySelector('.prompt-text');
-  promptText.style.animation = 'none';   // نوقف الأنيميشن اللي بتتحكم في الشفافية
+  promptText.style.animation = 'none';      
   promptText.style.opacity = '0';
   setTimeout(() => {
     screenEnvelope.classList.add('hide');
